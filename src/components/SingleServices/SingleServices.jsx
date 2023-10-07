@@ -1,13 +1,18 @@
 import { FaLocationDot } from "react-icons/fa6";
+
+// eslint-disable-next-line react/prop-types
 const SingleServices = ({event}) => {
+    // eslint-disable-next-line react/prop-types
     const { title, img, price, venue, category} = event;
     return (
         <div className="card border-[1px] shadow-[0px_0px_20px_rgba(204,243,0,0.5)] border-primary">
-            <figure><img src={img} alt="Shoes" /></figure>
+            <div className=" h-[250px] rounded-t-2xl"><img className=" h-full rounded-t-2xl object-cover" src={img} alt="Shoes" /></div>
             <div className="card-body rounded-b-2xl text-center">
                 <div className="card-actions justify-center">
-                    <div className="badge badge-outline text-primary">Fashion</div>
-                    <div className="badge badge-outline text-primary">Products</div>
+                    {
+                        // eslint-disable-next-line react/prop-types
+                        category.map((cat,idx) => <div key={idx} className="badge badge-outline text-primary">{cat}</div>)
+                    }
                 </div>
                 <h2 className="card-title justify-center font-bold text-2xl">{title}</h2>
                 <p className=" font-semibold">Tickets from $<span>{price}</span></p>

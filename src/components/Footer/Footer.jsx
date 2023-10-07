@@ -2,10 +2,10 @@ const Footer = () => {
     return (
         <div>
             <footer className="footer bg-neutral text-neutral-content max-w-6xl mx-auto py-6">
-                <div>
-                    <aside>
+                <div className=" flex justify-center w-full">
+                    <aside className="text-center">
                         <a className="font-pressstart text-primary normal-case text-3xl text-shadow">PLAYGALA</a>
-                        <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+                        <p>Gaming Industries Ltd.<br />Providing reliable game since 1992</p>
                     </aside>
                 </div>
 
