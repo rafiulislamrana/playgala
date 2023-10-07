@@ -1,5 +1,6 @@
 [
     {
+      "id": 1,
       "title": "Gamer's Paradise",
       "description": "Join us for a weekend of non-stop gaming action and excitement at Gamer's Paradise. Compete in esports tournaments, explore the latest gaming hardware, and meet fellow gamers. It's an event you don't want to miss! Immerse yourself in the gaming world from November 4, 2025, at 7:01 pm to November 6, 2025. The event takes place at the Convention Center, and tickets are priced at $45.",
       "img": "https://i.ibb.co/QKG67J7/737.jpg",
@@ -10,6 +11,7 @@
       "price": 45
     },
     {
+      "id": 2,
       "title": "VR Gaming Expo",
       "description": "Experience the future of gaming at our VR Gaming Expo. Try out the latest virtual reality games, attend VR development workshops, and immerse yourself in a new dimension of gaming. Join us from December 5, 2025, at 7:01 pm to December 7, 2025, at 11:59 pm at Tech Park. Tickets are priced at $55.",
       "img": "https://i.ibb.co/xX4GpLv/cosmic-background-with-colorful-laser-lights-perfect-digital-wallpaper.jpg",
@@ -20,6 +22,7 @@
       "price": 55
     },
     {
+      "id": 3,
       "title": "Console Wars Championship",
       "description": "Compete in the ultimate console gaming showdown at the Console Wars Championship. Battle it out in popular console games for a chance to win cash prizes and gaming gear. Join us from September 20, 2025, at 7:01 pm to September 22, 2025, at 11:59 pm at Arena Stadium. Tickets are priced at $30.",
       "img": "https://i.ibb.co/X8scw3K/man-neon-suit-sits-chair-with-neon-sign-that-says-word-it.jpg",
@@ -30,6 +33,7 @@
       "price": 30
     },
     {
+      "id": 4,
       "title": "Indie Game Showcase",
       "description": "Discover the creativity of indie game developers at the Indie Game Showcase. Play unique and innovative indie games, meet the developers, and support the indie gaming community. Join us from October 10, 2025, at 7:01 pm to October 12, 2025, at 11:59 pm at the Art Gallery. Tickets are priced at $25.",
       "img": "https://i.ibb.co/0tNM2Lz/world-collapse-doomsday-scene-digital-painting.jpg",
@@ -40,6 +44,7 @@
       "price": 25
     },
     {
+      "id": 5,
       "title": "Retro Gaming Fest",
       "description": "Relive the nostalgia of classic video games at the Retro Gaming Fest. Play retro games on vintage consoles, participate in high-score challenges, and browse retro gaming merchandise. Join us from August 15, 2025, at 7:01 pm to August 17, 2025, at 11:59 pm at the Community Center. Tickets are priced at $20.",
       "img": "https://i.ibb.co/Bt0GBVJ/cruel-war-scenes-digital-painting.jpg",
@@ -50,6 +55,7 @@
       "price": 20
     },
     {
+      "id": 6,
       "title": "Mobile Gaming Tournament",
       "description": "Show off your mobile gaming skills at the Mobile Gaming Tournament. Compete in mobile game tournaments, including battle royale and strategy games, for a chance to win cash prizes. Join us from July 25, 2025, at 7:01 pm to July 27, 2025, at 11:59 pm at the Gaming Arena. Tickets are priced at $35.",
       "img": "https://i.ibb.co/k5Fh9j5/2150712388.jpg",

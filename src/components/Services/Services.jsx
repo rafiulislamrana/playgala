@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import photo from "../../assets/cosmic-background-with-colorful-laser-lights-perfect-digital-wallpaper.jpg";
+import SingleServices from "../SingleServices/SingleServices";
+
+
 
 const Services = () => {
     const [events, setEvents] = useState([]);
@@ -10,17 +12,13 @@ const Services = () => {
             .then(data => setEvents(data))
     }, [])
     return (
-        <div>
-            <p>Data Count {events.length}</p>
-            <div className="card w-96 border-[1px] shadow-[0px_0px_20px_rgba(204,243,0,0.5)] border-primary">
-                <figure><img src={photo} alt="Shoes" /></figure>
-                <div className="card-body rounded-b-2xl">
-                    <h2 className="card-title font-bold text-2xl">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className="card-actions">
-                        <button className="btn bg-primary border-primary text-button mt-2">Buy Now</button>
-                    </div>
-                </div>
+        <div className=" py-16">
+            <h2 className="text-4xl text-primary font-pressstart text-shadow text-center pb-2">LIVE EVENTS</h2>
+            <p className="pb-14 text-center max-w-md mx-auto">Gaming live events are like big, fun parties for gamers. You get to play games, watch others play, and hang out with fellow gaming enthusiasts. Its a blast!</p>
+            <div>
+            {
+                events.map(event => <SingleServices key={event.id} event={event}></SingleServices>)
+            }
             </div>
         </div>
     );
