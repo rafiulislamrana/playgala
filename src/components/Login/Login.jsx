@@ -1,3 +1,6 @@
+import { NavLink } from "react-router-dom";
+import { AiOutlineGoogle } from "react-icons/ai";
+
 const Login = () => {
     return (
         <div className=" my-20">
@@ -7,7 +10,7 @@ const Login = () => {
                         <h2 className="text-4xl text-button font-pressstart bg-primary rounded-xl text-center pb-2">LOGIN</h2>
                         <p className="text-center max-w-md mx-auto bg-primary text-button">Join in the club now!</p>
                     </div>
-                    <form className="card-body rounded-xl pt-5">
+                    <form className="card-body rounded-t-xl pt-5 pb-3">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -26,11 +29,15 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
                         </div>
-                        <label className="label label-text-alt">
-                            Are you new here? 
-                            <a href="#" className="label-text-alt link link-hover">Register now</a>
-                        </label>
                     </form>
+                    <div className="w-full px-8">
+
+                        <button className="btn btn-primary w-full"><AiOutlineGoogle className="text-2xl"></AiOutlineGoogle> Login with Google</button>
+                    </div>
+                    <label className="label label-text-alt px-8 pb-8 rounded-b-xl">
+                        Are you new here?
+                        <NavLink to={"/register"} className="label-text-alt link link-hover font-semibold text-primary">Register now</NavLink>
+                    </label>
                 </div>
             </div>
         </div>
