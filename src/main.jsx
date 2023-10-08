@@ -9,10 +9,15 @@ import {
 import Home from './components/Home/Home.jsx';
 import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register.jsx';
+import SingleEvent from './components/SingleEvent/SingleEvent.jsx';
+import AuthProvider from './provider/AuthProvider.jsx';
+import PrivateRoutes from './components/routes/PrivateRoutes.jsx';
+import Error404 from './components/Error/Error404.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement: <Error404></Error404>,
     element: <App />,
     children: [
       {
@@ -26,6 +31,11 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/event/:id",
+        loader: () => fetch('../public/eventData.json'),
+        element: <PrivateRoutes><SingleEvent></SingleEvent></PrivateRoutes>
       }
     ]
   },
@@ -33,6 +43,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
