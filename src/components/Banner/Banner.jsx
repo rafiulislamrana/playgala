@@ -1,7 +1,7 @@
 
 const Banner = () => {
     return (
-        <div className="hero min-h-screen py-10">
+        <div className="hero min-h-screen pt-10 pb-20">
             <div className="hero-content flex-col lg:flex-row-reverse gap-16">
                 <img src="../../../src/assets/rise-humanoids-with-advanced-headgear-generative-ai.jpg" className="max-w-lg rounded-lg shadow-2xl" />
                 <div>

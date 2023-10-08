@@ -9,7 +9,7 @@ import Photo7 from "../../../src/assets/yarn.ae61cc47.png";
 import Photo8 from "../../../src/assets/nasa.3bf5af29.png";
 const Partner = () => {
     return (
-        <div className=" py-10">
+        <div className="pt-10 pb-24">
             <h2 className="text-4xl text-primary font-pressstart text-shadow text-center pb-2">OUR PARTNERS</h2>
             <p className="pb-10 text-center max-w-md mx-auto">Join in the club now!</p>
             <Marquee>

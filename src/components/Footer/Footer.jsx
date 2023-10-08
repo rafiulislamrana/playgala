@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
-        <div>
-            <footer className="footer bg-neutral text-neutral-content max-w-6xl mx-auto py-6">
+        <div className="border-t-[1px] border-primary shadow-[0px_0px_20px_rgba(204,243,0,0.5)]">
+            <footer className="footer bg-neutral text-neutral-content max-w-6xl mx-auto py-16 ">
                 <div className=" flex justify-center w-full">
                     <aside className="text-center">
                         <a className="font-pressstart text-primary normal-case text-3xl text-shadow">PLAYGALA</a>

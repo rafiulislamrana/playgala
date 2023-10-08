@@ -12,7 +12,7 @@ const Services = () => {
             .then(data => setEvents(data))
     }, [])
     return (
-        <div className=" py-16">
+        <div className=" py-20">
             <h2 className="text-4xl text-primary font-pressstart text-shadow text-center pb-2">LIVE EVENTS</h2>
             <p className="pb-14 text-center max-w-md mx-auto">Gaming live events are like big, fun parties for gamers. You get to play games, watch others play, and hang out with fellow gaming enthusiasts. Its a blast!</p>
             <div className="grid grid-cols-3 gap-4">
