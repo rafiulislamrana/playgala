@@ -9,11 +9,11 @@ const Login = () => {
     
     const navigateUser = useNavigate()
 
-    const { login, HandleGoogle } = useContext(AuthContext);
+    const { login, HandleGoogle, err, setErr } = useContext(AuthContext);
 
     const handleLogin = e => {
         e.preventDefault();
-
+        setErr("");
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
@@ -24,7 +24,7 @@ const Login = () => {
             toast("You Logged in Successfully!", res);
             navigateUser(location?.state ? location.state : "/")
         })
-        .catch(err => console.log(err));
+        .catch(err => setErr(err.message));
     }
     return (
         <div className=" my-20">
@@ -50,7 +50,12 @@ const Login = () => {
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
-                        <div className="form-control mt-6">
+                        <label className="bg-button label label-text-alt pb-8 rounded-b-xl text-red-500">
+                            {
+                                err
+                            }
+                        </label>
+                        <div className="form-control">
                             <button className="btn btn-primary">Login</button>
                         </div>
                     </form>

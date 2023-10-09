@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { AiOutlineGoogle } from "react-icons/ai";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { toast } from 'react-toastify';
 
@@ -8,28 +8,44 @@ import { toast } from 'react-toastify';
 
 const Register = () => {
 
-    const { createUser, update, HandleGoogleRegi } = useContext(AuthContext);
+    
+
+    const { createUser, update, HandleGoogleRegi, err, setErr } = useContext(AuthContext);
 
     const handleRegistration = e => {
         e.preventDefault();
-
+        setErr("");
         const form = new FormData(e.currentTarget);
         const name = form.get('name');
         const email = form.get('email');
         const password = form.get('password');
         console.log(form, name, email, password);
 
+        if(!/[A-Z]/.test(password)){
+            return setErr("Use atleast one uppercase in your password");
+        }
+        if(!/^[!@#$%^&*]+$/
+        .test(password)){
+            return setErr("Use atleast one special character in your password");
+        }
+
         createUser(email, password)
             .then(res => {
                 toast("Your Account Created Successfully!");
-                
+
                 if (!res.user.displayName) {
+                    console.log("Updated")
                     update(name)
                         .then(res => console.log(res))
                         .catch(err => console.log(err));
                 }
             })
-            .catch(error => console.error(error));
+            .catch(err => setErr(err.message));
+
+
+            console.log(err);
+        
+            
 
 
     }
@@ -61,6 +77,11 @@ const Register = () => {
                             <input type="password" placeholder="password" className="input input-bordered" name="password" required />
 
                         </div>
+                        <label className="bg-button label label-text-alt pb-8 rounded-b-xl text-red-500">
+                            {
+                                err
+                            }
+                        </label>
                         <div className="form-control mt-6 gap-3">
                             <button className="btn btn-primary">Register</button>
                         </div>

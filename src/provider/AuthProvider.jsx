@@ -12,6 +12,7 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
+    const [err , setErr] = useState("");
 
     const createUser = (email, password) => {
         setLoading(true);
@@ -20,7 +21,7 @@ const AuthProvider = ({ children }) => {
 
     const login = (email, password) => {
         setLoading(true);
-        return signInWithEmailAndPassword(auth, email, password);;
+        return signInWithEmailAndPassword(auth, email, password);
     }
 
     const update = (name) => {
@@ -47,6 +48,7 @@ const AuthProvider = ({ children }) => {
     }
 
     const HandleGoogle = () => {
+        setErr('');
         signInWithPopup(auth, googleProvider)
             .then(res => {
                 toast("You Logged in Successfully!",res)
@@ -54,6 +56,7 @@ const AuthProvider = ({ children }) => {
             .catch(err => console.error(err))
     }
     const HandleGoogleRegi = () => {
+        setErr('');
         signInWithPopup(auth, googleProvider)
             .then(res => {
                 toast("Your Account Created Successfully!",res)
@@ -70,7 +73,9 @@ const AuthProvider = ({ children }) => {
         login,
         loading,
         HandleGoogle,
-        HandleGoogleRegi
+        HandleGoogleRegi,
+        err,
+        setErr
     }
 
     return (
