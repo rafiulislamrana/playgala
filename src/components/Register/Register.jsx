@@ -20,12 +20,10 @@ const Register = () => {
         const email = form.get('email');
         const password = form.get('password');
         const url = form.get('url')
-        console.log(name, email, password, url)
 
         if(!/[A-Z]/.test(password)){
             return setErr("Use atleast one uppercase in your password");
         }
-        console.log(/[!@#$%^&*]/.test(password), password)
         if(!/[!@#$%^&*]/.test(password)){
             return setErr("Use atleast one special character in your password");
         }
@@ -35,16 +33,12 @@ const Register = () => {
                 toast("Your Account Created Successfully!");
 
                 if (!res.user.displayName) {
-                    console.log("Updated")
                     update(name,url)
                         .then(res => console.log(res))
                         .catch(err => console.log(err));
                 }
             })
             .catch(err => setErr(err.message));
-
-
-            console.log(err);
         
             
 
