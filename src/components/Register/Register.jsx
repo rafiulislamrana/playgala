@@ -19,13 +19,14 @@ const Register = () => {
         const name = form.get('name');
         const email = form.get('email');
         const password = form.get('password');
-        console.log(form, name, email, password);
+        const url = form.get('url')
+        console.log(name, email, password, url)
 
         if(!/[A-Z]/.test(password)){
             return setErr("Use atleast one uppercase in your password");
         }
-        if(!/^[!@#$%^&*]+$/
-        .test(password)){
+        console.log(/[!@#$%^&*]/.test(password), password)
+        if(!/[!@#$%^&*]/.test(password)){
             return setErr("Use atleast one special character in your password");
         }
 
@@ -35,7 +36,7 @@ const Register = () => {
 
                 if (!res.user.displayName) {
                     console.log("Updated")
-                    update(name)
+                    update(name,url)
                         .then(res => console.log(res))
                         .catch(err => console.log(err));
                 }
@@ -50,7 +51,7 @@ const Register = () => {
 
     }
     return (
-        <div className=" my-20">
+        <div className="my-10 mx-[1rem] md:my-20">
             <div className="flex-col lg:flex-row-reverse justify-center items-center">
                 <div className="card mx-auto flex-shrink-0 w-full max-w-md border-[1px] shadow-[0px_0px_20px_rgba(204,243,0,0.5)] border-primary rounded-xl bg-primary">
                     <div className="bg-primary rounded-xl pt-8 pb-5">
@@ -62,7 +63,13 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="name" placeholder="name" className="input input-bordered" name="name" required />
+                            <input type="text" placeholder="name" className="input input-bordered" name="name" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Photo URL</span>
+                            </label>
+                            <input type="name" placeholder="photo url" className="input input-bordered" name="url" required />
                         </div>
                         <div className="form-control">
                             <label className="label">

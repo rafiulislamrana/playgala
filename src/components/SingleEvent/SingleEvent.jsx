@@ -12,13 +12,13 @@ const SingleEvent = () => {
 
     return (
         <div className="max-w-6xl mx-auto pt-10 pb-20">
-            <div className="grid grid-cols-3 gap-5">
-                <div className="col-span-2">
-                    <div className="h-[500px]">
-                        <img className="h-full object-cover rounded-lg" src={loaded[0].img} alt="" />
+            <div className="grid grid-cols-1 lg:grid-cols-3 mx-[1rem] gap-5">
+                <div className="lg:col-span-2">
+                    <div className="h-[350px] lg:h-[500px] w-full">
+                        <img className="h-full w-full object-cover rounded-lg" src={loaded[0].img} alt="" />
                     </div>
-                    <h2 className="pt-10 pb-5 font-pressstart text-4xl">{loaded[0].title}</h2>
-                    <p className="">{loaded[0].description}</p>
+                    <h2 className="pt-10 pb-5 font-pressstart text-4xl text-center lg:text-left">{loaded[0].title}</h2>
+                    <p className="text-center lg:text-left">{loaded[0].description}</p>
                 </div>
                 <div className=" ">
                     <div className="flex-col lg:flex-row-reverse justify-center items-center">
@@ -29,7 +29,7 @@ const SingleEvent = () => {
                             </div>
 
                             <div className="p-8 rounded-b-xl bg-button">
-                                <div className="card-actions justify-center">
+                                <div className="card-actions flex-col items-center justify-center">
                                     {
                                         // eslint-disable-next-line react/prop-types
                                         loaded[0].category.map((cat, idx) => <div key={idx} className="badge badge-outline text-primary">{cat}</div>)
@@ -37,19 +37,19 @@ const SingleEvent = () => {
                                     <div className="flex flex-col items-center gap-4 pt-5">
                                         <div className="flex items-center gap-2">
                                             <BsFillCalendarCheckFill></BsFillCalendarCheckFill>
-                                            <p><b>Start Date: </b>{loaded[0].start_date}</p>
+                                            <p className=" text-xs md:text-base"><b>Start Date: </b>{loaded[0].start_date}</p>
                                         </div>
                                         <div className="flex items-center gap-2">
                                             <BsFillCalendarXFill></BsFillCalendarXFill>
-                                            <p><b>End Date: </b>{loaded[0].end_date}</p>
+                                            <p className=" text-xs md:text-base"><b>End Date: </b>{loaded[0].end_date}</p>
                                         </div>
                                         <div className="flex items-center gap-2">
                                             <FaLocationArrow></FaLocationArrow>
-                                            <p><b>Venue: </b>{loaded[0].venue}</p>
+                                            <p className=" text-xs md:text-base"><b>Venue: </b>{loaded[0].venue}</p>
                                         </div>
                                         <div className="flex items-center gap-2">
                                             <ImPriceTag className="text-2xl text-primary"></ImPriceTag>
-                                            <p className=" text-4xl text-primary"><b>Price: ${loaded[0].price}</b></p>
+                                            <p className="text-2xl md:text-4xl text-primary"><b>Price: ${loaded[0].price}</b></p>
                                         </div>
                                         <Link className="w-full"><button className="btn bg-primary border-primary text-button mt-2 w-full hover:text-primary">Register Now</button></Link>
                                     </div>

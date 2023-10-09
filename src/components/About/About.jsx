@@ -1,11 +1,11 @@
 const About = () => {
     return (
         <div>
-            <div className="max-w-6xl mx-auto py-16">
-                <h1 className="text-6xl font-pressstart text-center text-primary">About Us</h1>
+            <div className="max-w-6xl mx-[1rem] lg:mx-auto py-16">
+                <h1 className="text-3xl md:text-6xl font-pressstart text-center text-primary">About Us</h1>
                 <br />
                 <h4 className="text-center text-xl">**PlayGala - Your Gateway to the Gaming Universe**</h4>
-                <p className="py-6"><br />
+                <p className="text-center md:py-6"><br />
 
                     Welcome to PlayGala, your ultimate destination for all things gaming events! We are more than just a website; we are the heartbeat of the gaming community, where gamers, enthusiasts, and event organizers unite to celebrate the world of gaming.
 

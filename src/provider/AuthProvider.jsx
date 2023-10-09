@@ -24,9 +24,10 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password);
     }
 
-    const update = (name) => {
+    const update = (name,url) => {
         updateProfile(auth.currentUser, {
-            displayName: name
+            displayName: name, photoURL: url
+
         });
         location.reload()
     }

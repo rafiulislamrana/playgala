@@ -22,12 +22,12 @@ const Login = () => {
         login(email, password)
         .then(res => {
             toast("You Logged in Successfully!", res);
-            navigateUser(location?.state ? location.state : "/")
+            navigateUser(location?.state ? location.state : "/");
         })
         .catch(err => setErr(err.message));
     }
     return (
-        <div className=" my-20">
+        <div className="my-10 mx-[1rem] md:my-20">
             <div className="flex-col lg:flex-row-reverse justify-center items-center">
                 <div className="card mx-auto flex-shrink-0 w-full max-w-md border-[1px] shadow-[0px_0px_20px_rgba(204,243,0,0.5)] border-primary rounded-xl bg-primary">
                     <div className="bg-primary rounded-xl pt-8 pb-5">

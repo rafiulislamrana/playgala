@@ -4,9 +4,9 @@ const Contact = () => {
             <div className="max-w-6xl mx-auto py-16">
                 <div className="hero-content flex-col gap-16 lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Contact Us!</h1>
-                        <p className="py-6">At PlayGala, we value your feedback and inquiries. Whether you have questions about our gaming events, need assistance with your account, or simply want to get in touch, were here to help. Our dedicated support team is available to assist you with any queries or concerns you may have.</p>
-                        <p>
+                        <h1 className="text-2xl md:text-5xl font-bold font-pressstart text-primary">Contact Us!</h1>
+                        <p className=" text-sm md:text-base py-6">At PlayGala, we value your feedback and inquiries. Whether you have questions about our gaming events, need assistance with your account, or simply want to get in touch, were here to help. Our dedicated support team is available to assist you with any queries or concerns you may have.</p>
+                        <p className=" text-sm md:text-base">
                             Please feel free to reach out to us through the following channels: <br />
                             <br />
 
