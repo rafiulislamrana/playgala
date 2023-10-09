@@ -2,7 +2,7 @@
 
 Welcome to PlayGala, your ultimate destination for all things gaming events! We are more than just a website; we are the heartbeat of the gaming community, where gamers, enthusiasts, and event organizers unite to celebrate the world of gaming.
 
-Live Link: 
+Live Link: https://playgala.web.app/
 
 Five different features and functionalities of my website:
 
